@@ -5,6 +5,7 @@ from scrapy.selector import Selector
 from selenium.webdriver.chrome.options import Options
 from shutil import which
 
+
 class CoinSpider(scrapy.Spider):
     name = 'coin_selenium'
     allowed_domains = ['www.livecoin.net/en']
