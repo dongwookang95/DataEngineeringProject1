@@ -31,6 +31,4 @@ class BestMoviesSpider(CrawlSpider):
             'duration' : response.xpath("normalize-space(//div[@class='subtext']/time/text())").get(),
             'genre' : response.xpath("//div[@class='title_wrapper']/div/a/text()").get(),
             'rating' : response.xpath("//span[@itemprop='ratingValue']/text()").get(),
-            'movie_url' : response.url,
-            'user-agent' : response.request.headers["User-Agent"]
-        }
+            'movie_url' : response.url}
